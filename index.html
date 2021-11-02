@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./js/scripts.js" type="module"></script>
+    <title>Pisteando</title>
+  </head>
+  <body>
+    <main class="crud">
+      <section class="form-anuncio">
+        <h2>Alta Anuncio</h2>
+        <form>
+          <input
+            type="text"
+            name="txtTitulo"
+            placeholder="Titulo"
+            autocomplete="off"
+          />
+          <br>
+          <fieldset>
+            <legend>Transacción</legend>
+            <input type="radio" name="rdoTransaccion" value="Venta" checked>Venta <br>
+            <input type="radio" name="rdoTransaccion" value="Alquiler">Alquiler <br>
+          </fieldset>
+          <br>
+          <input
+            type="text"
+            name="txtDescripcion"
+            placeholder="Descripcion"
+            autocomplete="off"
+          />
+          <br>
+          <input
+            type="number"
+            name="txtPrecio"
+            placeholder="Precio"
+            min=1
+          />
+          <br>
+          <input
+            type="number"
+            name="txtPuertas"
+            placeholder="Puertas"
+            min=3
+            max=5
+          />
+          <br>
+          <input
+            type="number"
+            name="txtKilometros"
+            placeholder="Kilometros"
+            min=1
+          />
+          <br>
+          <input
+            type="number"
+            name="txtPotencia"
+            placeholder="Potencia"
+            min=100
+          />
+          <br>
+          
+          <input type="submit" value="Crear/Actualizar">
+          <input type="button" value="Eliminar" id="btnDelete">
+          <input type="hidden" name="txtId">
+        </form>
+      </section>
+      <section class="lista-anuncios">
+        <h2>Listado de Anuncios</h2>
+        <div id="divTabla"></div>
+      </section>
+    </main>
+  </body>
+</html>
